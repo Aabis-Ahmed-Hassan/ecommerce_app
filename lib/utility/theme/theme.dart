@@ -3,6 +3,7 @@ import 'package:ecommerce_app/utility/theme/custom_theme/bottom_sheet_theme.dart
 import 'package:ecommerce_app/utility/theme/custom_theme/checkbox_theme.dart';
 import 'package:ecommerce_app/utility/theme/custom_theme/chip_theme.dart';
 import 'package:ecommerce_app/utility/theme/custom_theme/elevated_button_theme.dart';
+import 'package:ecommerce_app/utility/theme/custom_theme/outlined_button_theme.dart';
 import 'package:ecommerce_app/utility/theme/custom_theme/text_theme.dart';
 import 'package:ecommerce_app/utility/theme/custom_theme/textfield_theme.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,7 @@ class MyAppTheme {
     checkboxTheme: MyCheckboxTheme.lightCheckboxTheme,
     bottomSheetTheme: MyBottomSheetTheme.lightBottomSheetTheme,
     elevatedButtonTheme: MyElevatedButtonTheme.lightElevatedButtonTheme,
-    outlinedButtonTheme: OutlinedButtonThemeData(),
+    outlinedButtonTheme: MyOutlinedButtonTheme.lightOutlinedButtonTheme,
     inputDecorationTheme: MyTextFormFieldTheme.lightInputDecorationTheme,
   );
 
@@ -41,7 +42,7 @@ class MyAppTheme {
     checkboxTheme: MyCheckboxTheme.darkCheckboxTheme,
     bottomSheetTheme: MyBottomSheetTheme.darkBottomSheetTheme,
     elevatedButtonTheme: MyElevatedButtonTheme.darkElevatedButtonTheme,
-    outlinedButtonTheme: OutlinedButtonThemeData(),
+    outlinedButtonTheme: MyOutlinedButtonTheme.darkOutlinedButtonTheme,
     inputDecorationTheme: MyTextFormFieldTheme.darkInputDecorationTheme,
   );
 }
