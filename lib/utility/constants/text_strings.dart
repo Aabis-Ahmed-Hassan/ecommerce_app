@@ -1,4 +1,4 @@
-class TextsStrings {
+class TextStrings {
   /// This class contains all the App Text in String formats.
 
   // GLOBAL Texts
