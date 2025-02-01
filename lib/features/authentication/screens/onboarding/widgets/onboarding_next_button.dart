@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/features/authentication/controllers/onboarding_controller.dart';
+import 'package:ecommerce_app/utility/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../utility/constants/colors.dart';
@@ -9,7 +10,7 @@ class OnboardingNextButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isDark = Theme.of(context).brightness == Brightness.dark;
+    bool isDark = THelperFunctions.isDarkMode(context);
 
     final controller = OnboardingController.instance;
     return Positioned(

@@ -1,9 +1,9 @@
 class ImageStrings {
   static const String randomImage = 'assets/logo/logo.png';
-  static const String darkAppLogo = '';
-  static const String lightAppLogo = '';
-  static const String google = '';
-  static const String facebook = '';
+  static const String darkAppLogo = 'assets/logo/logo.png';
+  static const String lightAppLogo = 'assets/logo/logo.png';
+  static const String google = 'assets/logo/logo.png';
+  static const String facebook = 'assets/logo/logo.png';
 
   static const onboardingImage1 =
       'assets/images/onboarding_images/onboarding_image_1.gif';

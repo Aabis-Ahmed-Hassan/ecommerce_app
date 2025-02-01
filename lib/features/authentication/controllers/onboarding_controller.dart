@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/features/authentication/screens/login/login.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
@@ -25,13 +26,20 @@ class OnboardingController extends GetxController {
         duration: Duration(milliseconds: 300),
         curve: Curves.easeInOut,
       );
+    } else {
+      moveToNextScreen();
     }
   }
 
   void skipPage() {
     print('skip page');
     pageController.jumpTo(2);
+    moveToNextScreen();
   }
+}
+
+void moveToNextScreen() {
+  Get.offAll(Login());
 }
 
 // class OnboardingController extends GetxController {
