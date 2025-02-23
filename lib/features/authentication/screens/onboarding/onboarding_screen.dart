@@ -38,7 +38,7 @@ class OnboardingScreen extends StatelessWidget {
             ],
           ),
 
-            // navigation buttons
+          // navigation buttons
           OnboardingIndicators(),
 
           //   forward button
@@ -51,10 +51,6 @@ class OnboardingScreen extends StatelessWidget {
               onTap: () => controller.skipPage(),
               child: Text('Skip'),
             ),
-          ),
-          Positioned(
-            bottom: 0,
-            child: TextButton(onPressed: () {}, child: Text('index')),
           ),
         ],
       ),
