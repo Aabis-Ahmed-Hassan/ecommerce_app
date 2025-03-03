@@ -1,5 +1,5 @@
-class TPricingCalculator {
-  /// Calculate Price based on tax and shipping
+class PricingCalculator {
+  /// -- Calculate Price based on tax and shipping
   static double calculateTotalPrice(double productPrice, String location) {
     double taxRate = getTaxRateForLocation(location);
     double taxAmount = productPrice * taxRate;
@@ -10,13 +10,13 @@ class TPricingCalculator {
     return totalPrice;
   }
 
-  /// Calculate shipping cost
+  /// -- Calculate shipping cost
   static String calculateShippingCost(double productPrice, String location) {
     double shippingCost = getShippingCost(location);
     return shippingCost.toStringAsFixed(2);
   }
 
-  /// Calculate tax
+  /// -- Calculate tax
   static String calculateTax(double productPrice, String location) {
     double taxRate = getTaxRateForLocation(location);
     double taxAmount = productPrice * taxRate;
@@ -24,34 +24,19 @@ class TPricingCalculator {
   }
 
   static double getTaxRateForLocation(String location) {
-    // Replace with your actual tax rate logic based on location.
-    // This is just a placeholder.
-    switch (location) {
-      case 'CA':
-        return 0.0825; // California tax rate
-      case 'NY':
-        return 0.08875; // New York tax rate
-      default:
-        return 0.05; // Default tax rate
-    }
+    // Lookup the tax rate for the given location from a tax rate database or API.
+    // Return the appropriate tax rate.
+    return 0.10; // Example tax rate of 10%
   }
 
   static double getShippingCost(String location) {
-    // Replace with your actual shipping cost logic based on location and/or product price.
-    // This is just a placeholder.
-    switch (location) {
-      case 'CA':
-        return 10.0;
-      case 'NY':
-        return 15.0;
-      default:
-        return 5.0;
-    }
+    // Lookup the shipping cost for the given location using a shipping rate API.
+    // Calculate the shipping cost based on various factors like distance, weight, etc.
+    return 5.00; // Example shipping cost of $5
   }
 
-  /// Sum all cart values and return total amount
-// static double calculateCartTotal(CartModel cart) {
-//   return cart.items.map((e) => e.price).fold(
-//       0, (previousPrice, currentPrice) => previousPrice + (currentPrice ?? 0));
-// }
+  // /// -- Sum all cart values and return total amount
+  // static double calculateCartTotal(CartModel cart) {
+  //   return cart.items.map((e) => e.price).fold(0, (previousPrice, currentPrice) => previousPrice + (currentPrice ?? 0));
+  // }
 }

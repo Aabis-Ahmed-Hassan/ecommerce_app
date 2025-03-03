@@ -24,7 +24,7 @@ class DeviceUtils {
 
   static bool isPortraitOrientation(BuildContext context) {
     final viewInsets = View.of(context).viewInsets;
-    return viewInsets.bottom != 0; // Corrected condition
+    return viewInsets.bottom != 0;
   }
 
   static void setFullScreen(bool enable) {
@@ -68,8 +68,7 @@ class DeviceUtils {
 
   static Future<bool> isPhysicalDevice() async {
     return defaultTargetPlatform == TargetPlatform.android ||
-        defaultTargetPlatform ==
-            TargetPlatform.iOS; // Corrected typo "10S" to "iOS"
+        defaultTargetPlatform == TargetPlatform.iOS;
   }
 
   static void vibrate(Duration duration) {
@@ -108,11 +107,13 @@ class DeviceUtils {
     return Platform.isAndroid;
   }
 
-  static Future<void> launchUrl(String url) async {
+  static void launchUrl(String url) async {
     if (await canLaunchUrlString(url)) {
       await launchUrlString(url);
     } else {
       throw 'Could not launch $url';
     }
   }
+
+// Add more device utility methods as per your specific requirements.
 }

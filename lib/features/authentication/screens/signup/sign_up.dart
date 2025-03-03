@@ -11,43 +11,43 @@ class SignUp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isDark = THelperFunctions.isDarkMode(context);
+    bool isDark = HelperFunctions.isDarkMode(context);
     return Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,
         ),
         body: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.all(Sizes.defaultSpace),
+            padding: EdgeInsets.all(MySizes.defaultSpace),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 // heading
                 Text(
-                  TextStrings.signUpTitle,
+                  TextStrings.signupTitle,
                   style: Theme.of(context).textTheme.headlineMedium,
                 ),
                 // space
                 SizedBox(
-                  height: Sizes.spaceBtwSections,
+                  height: MySizes.spaceBtwSections,
                 ),
                 // signup form (name, username, email, phone, password, I agree, create button)
                 SignUpForm(),
                 // space
                 SizedBox(
-                  height: Sizes.spaceBtwItems,
+                  height: MySizes.spaceBtwItems,
                 ),
                 // divider
                 MyDivider(title: TextStrings.orSignUpWith),
                 // space
                 SizedBox(
-                  height: Sizes.spaceBtwItems,
+                  height: MySizes.spaceBtwItems,
                 ),
                 // sign up with socials
                 SocialIcons(),
                 // space
                 SizedBox(
-                  height: Sizes.spaceBtwItems,
+                  height: MySizes.spaceBtwItems,
                 ),
               ],
             ),

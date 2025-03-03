@@ -23,8 +23,8 @@ class SocialIcons extends StatelessWidget {
           child: IconButton(
             onPressed: () {},
             icon: Image(
-              height: Sizes.iconMd,
-              width: Sizes.iconMd,
+              height: MySizes.iconMd,
+              width: MySizes.iconMd,
               image: AssetImage(
                 ImageStrings.google,
               ),
@@ -32,7 +32,7 @@ class SocialIcons extends StatelessWidget {
           ),
         ),
         SizedBox(
-          width: Sizes.spaceBtwItems,
+          width: MySizes.spaceBtwItems,
         ),
         Container(
           decoration: BoxDecoration(
@@ -44,8 +44,8 @@ class SocialIcons extends StatelessWidget {
           child: IconButton(
             onPressed: () {},
             icon: Image(
-              height: Sizes.iconMd,
-              width: Sizes.iconMd,
+              height: MySizes.iconMd,
+              width: MySizes.iconMd,
               image: AssetImage(
                 ImageStrings.facebook,
               ),

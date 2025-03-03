@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../../utility/constants/colors.dart';
 import '../../../../../utility/constants/sizes.dart';
 import '../../../../../utility/constants/text_strings.dart';
 import '../../../../../utility/helpers/helper_functions.dart';
+import '../email_verification.dart';
 
 class SignUpForm extends StatelessWidget {
   const SignUpForm({
@@ -13,7 +15,7 @@ class SignUpForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isDark = THelperFunctions.isDarkMode(context);
+    bool isDark = HelperFunctions.isDarkMode(context);
     return Form(
       child: Column(
         children: [
@@ -29,7 +31,7 @@ class SignUpForm extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: Sizes.spaceBtwInputFields,
+                width: MySizes.spaceBtwInputFields,
               ),
               Expanded(
                 child: TextFormField(
@@ -43,7 +45,7 @@ class SignUpForm extends StatelessWidget {
             ],
           ),
           SizedBox(
-            height: Sizes.spaceBtwInputFields,
+            height: MySizes.spaceBtwInputFields,
           ),
           TextFormField(
             decoration: InputDecoration(
@@ -52,7 +54,7 @@ class SignUpForm extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: Sizes.spaceBtwInputFields,
+            height: MySizes.spaceBtwInputFields,
           ),
           TextFormField(
             decoration: InputDecoration(
@@ -61,7 +63,7 @@ class SignUpForm extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: Sizes.spaceBtwInputFields,
+            height: MySizes.spaceBtwInputFields,
           ),
           TextFormField(
             decoration: InputDecoration(
@@ -70,7 +72,7 @@ class SignUpForm extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: Sizes.spaceBtwInputFields,
+            height: MySizes.spaceBtwInputFields,
           ),
           TextFormField(
             decoration: InputDecoration(
@@ -80,7 +82,7 @@ class SignUpForm extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: Sizes.spaceBtwSections,
+            height: MySizes.spaceBtwSections,
           ),
           Row(
             children: [
@@ -93,7 +95,7 @@ class SignUpForm extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: Sizes.sm,
+                width: MySizes.sm,
               ),
               Expanded(
                 child: Text.rich(
@@ -132,12 +134,12 @@ class SignUpForm extends StatelessWidget {
             ],
           ),
           SizedBox(
-            height: Sizes.spaceBtwItems,
+            height: MySizes.spaceBtwItems,
           ),
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () => Get.to(EmailVerification()),
               child: Text(TextStrings.createAccount),
             ),
           ),

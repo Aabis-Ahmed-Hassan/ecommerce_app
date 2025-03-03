@@ -10,12 +10,12 @@ class OnboardingNextButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isDark = THelperFunctions.isDarkMode(context);
+    bool isDark = HelperFunctions.isDarkMode(context);
 
     final controller = OnboardingController.instance;
     return Positioned(
-      bottom: Sizes.appBarHeight,
-      right: Sizes.defaultSpace,
+      bottom: MySizes.appBarHeight,
+      right: MySizes.defaultSpace,
       child: ElevatedButton(
         onPressed: controller.nextPage,
         style: ElevatedButton.styleFrom(
@@ -26,7 +26,7 @@ class OnboardingNextButton extends StatelessWidget {
           // Iconsax.arrow_right3,
           Icons.arrow_right_alt,
           color: isDark ? MyColors.white : Colors.white,
-          size: Sizes.iconLg,
+          size: MySizes.iconLg,
         ),
       ),
     );

@@ -2,6 +2,7 @@ import 'package:ecommerce_app/features/authentication/controllers/onboarding_con
 import 'package:ecommerce_app/features/authentication/screens/onboarding/widgets/onboarding_indicators.dart';
 import 'package:ecommerce_app/features/authentication/screens/onboarding/widgets/onboarding_next_button.dart';
 import 'package:ecommerce_app/features/authentication/screens/onboarding/widgets/onboarding_page.dart';
+import 'package:ecommerce_app/utility/constants/image_strings.dart';
 import 'package:ecommerce_app/utility/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -24,16 +25,19 @@ class OnboardingScreen extends StatelessWidget {
             onPageChanged: controller.updatePageIndicator,
             children: [
               OnboardingPage(
-                title: TextStrings.onboardingTitle1,
+                title: TextStrings.onBoardingTitle1,
                 subtitle: TextStrings.onBoardingSubTitle1,
+                image: ImageStrings.onBoardingImage1,
               ),
               OnboardingPage(
                 title: TextStrings.onBoardingTitle2,
                 subtitle: TextStrings.onBoardingSubTitle2,
+                image: ImageStrings.onBoardingImage2,
               ),
               OnboardingPage(
                 title: TextStrings.onBoardingTitle3,
                 subtitle: TextStrings.onBoardingSubTitle3,
+                image: ImageStrings.onBoardingImage3,
               ),
             ],
           ),
@@ -45,8 +49,8 @@ class OnboardingScreen extends StatelessWidget {
           OnboardingNextButton(),
           // skip button
           Positioned(
-            top: Sizes.appBarHeight,
-            right: Sizes.defaultSpace,
+            top: MySizes.appBarHeight,
+            right: MySizes.defaultSpace,
             child: InkWell(
               onTap: () => controller.skipPage(),
               child: Text('Skip'),

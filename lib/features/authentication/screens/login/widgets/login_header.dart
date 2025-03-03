@@ -10,25 +10,25 @@ class LoginHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isDark = THelperFunctions.isDarkMode(context);
+    bool isDark = HelperFunctions.isDarkMode(context);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Image(
           height: 100,
           image: AssetImage(
-            isDark ? ImageStrings.darkAppLogo : ImageStrings.lightAppLogo,
+            isDark ? ImageStrings.lightAppLogo : ImageStrings.darkAppLogo,
           ),
         ),
         SizedBox(
-          height: Sizes.spaceBtwItems,
+          height: MySizes.spaceBtwItems,
         ),
         Text(
           TextStrings.loginTitle,
           style: Theme.of(context).textTheme.headlineMedium,
         ),
         SizedBox(
-          height: Sizes.spaceBtwItems,
+          height: MySizes.spaceBtwItems,
         ),
         Text(
           TextStrings.loginSubTitle,

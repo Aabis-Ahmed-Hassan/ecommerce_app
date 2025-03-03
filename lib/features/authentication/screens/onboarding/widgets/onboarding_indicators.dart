@@ -13,8 +13,8 @@ class OnboardingIndicators extends StatelessWidget {
     final controller = OnboardingController.instance;
 
     return Positioned(
-      bottom: Sizes.appBarHeight + 25,
-      left: Sizes.defaultSpace,
+      bottom: MySizes.appBarHeight + 25,
+      left: MySizes.defaultSpace,
       child: SmoothPageIndicator(
         controller: controller.pageController,
         count: 3,

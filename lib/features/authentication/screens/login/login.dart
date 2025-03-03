@@ -14,12 +14,11 @@ class Login extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isDark = THelperFunctions.isDarkMode(context);
+    bool isDark = HelperFunctions.isDarkMode(context);
     return Scaffold(
         body: SingleChildScrollView(
       child: Padding(
         padding: SpacingStyle.paddingWithAppbarHeight,
-
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -33,7 +32,7 @@ class Login extends StatelessWidget {
             MyDivider(title: TextStrings.orSignInWith),
             // Space
             SizedBox(
-              height: Sizes.spaceBtwItems,
+              height: MySizes.spaceBtwItems,
             ),
             //   login with google/fb
             SocialIcons(),

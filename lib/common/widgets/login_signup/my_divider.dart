@@ -13,7 +13,7 @@ class MyDivider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isDark = THelperFunctions.isDarkMode(context);
+    bool isDark = HelperFunctions.isDarkMode(context);
 
     return Row(
       children: [

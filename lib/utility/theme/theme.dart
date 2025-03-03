@@ -1,12 +1,14 @@
-import 'package:ecommerce_app/utility/theme/custom_theme/appbar_theme.dart';
-import 'package:ecommerce_app/utility/theme/custom_theme/bottom_sheet_theme.dart';
-import 'package:ecommerce_app/utility/theme/custom_theme/checkbox_theme.dart';
-import 'package:ecommerce_app/utility/theme/custom_theme/chip_theme.dart';
-import 'package:ecommerce_app/utility/theme/custom_theme/elevated_button_theme.dart';
-import 'package:ecommerce_app/utility/theme/custom_theme/outlined_button_theme.dart';
-import 'package:ecommerce_app/utility/theme/custom_theme/text_theme.dart';
-import 'package:ecommerce_app/utility/theme/custom_theme/textfield_theme.dart';
+import 'package:ecommerce_app/utility/theme/widget_themes/appbar_theme.dart';
+import 'package:ecommerce_app/utility/theme/widget_themes/bottom_sheet_theme.dart';
+import 'package:ecommerce_app/utility/theme/widget_themes/checkbox_theme.dart';
+import 'package:ecommerce_app/utility/theme/widget_themes/chip_theme.dart';
+import 'package:ecommerce_app/utility/theme/widget_themes/elevated_button_theme.dart';
+import 'package:ecommerce_app/utility/theme/widget_themes/outlined_button_theme.dart';
+import 'package:ecommerce_app/utility/theme/widget_themes/text_field_theme.dart';
+import 'package:ecommerce_app/utility/theme/widget_themes/text_theme.dart';
 import 'package:flutter/material.dart';
+
+import '../constants/colors.dart';
 
 class MyAppTheme {
   MyAppTheme._();
@@ -14,8 +16,9 @@ class MyAppTheme {
   static ThemeData lightTheme = ThemeData(
     useMaterial3: true,
     fontFamily: 'Poppins',
+    disabledColor: Colors.grey,
     brightness: Brightness.light,
-    primaryColor: Colors.blue,
+    primaryColor: MyColors.primary,
     textTheme: MyTextTheme.lightTextTheme,
     chipTheme: MyChipTheme.lightChipTheme,
     scaffoldBackgroundColor: Colors.white,
@@ -27,17 +30,15 @@ class MyAppTheme {
     inputDecorationTheme: MyTextFormFieldTheme.lightInputDecorationTheme,
   );
 
-  /// Dark Theme
   static ThemeData darkTheme = ThemeData(
-    useMaterial3: true, // Updated to use Material 3 if available
-    fontFamily: 'Poppins', // Make sure Poppins font is added to your project
+    useMaterial3: true,
+    fontFamily: 'Poppins',
+    disabledColor: MyColors.grey,
     brightness: Brightness.dark,
-    primaryColor: Colors.blue, // Customize primary color
-    scaffoldBackgroundColor:
-        Colors.black, // Customize scaffold background color
-
+    primaryColor: MyColors.primary,
     textTheme: MyTextTheme.darkTextTheme,
     chipTheme: MyChipTheme.darkChipTheme,
+    scaffoldBackgroundColor: Colors.black,
     appBarTheme: MyAppBarTheme.darkAppBarTheme,
     checkboxTheme: MyCheckboxTheme.darkCheckboxTheme,
     bottomSheetTheme: MyBottomSheetTheme.darkBottomSheetTheme,

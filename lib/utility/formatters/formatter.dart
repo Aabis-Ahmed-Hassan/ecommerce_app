@@ -15,16 +15,15 @@ class Formatter {
   static String formatPhoneNumber(String phoneNumber) {
     // Assuming a 10-digit US phone number format: (123) 456-7890
     if (phoneNumber.length == 10) {
-      return '(${phoneNumber.substring(0, 3)}) ${phoneNumber.substring(3, 6)}-${phoneNumber.substring(6)}'; // Added hyphen
-    } else if (phoneNumber.length == 11 && phoneNumber.startsWith('1')) {
-      // Added 11-digit US check
-      return '(${phoneNumber.substring(1, 4)}) ${phoneNumber.substring(4, 7)}-${phoneNumber.substring(7)}'; // Added hyphen and removed leading 1
+      return '(${phoneNumber.substring(0, 3)}) ${phoneNumber.substring(3, 6)} ${phoneNumber.substring(6)}';
+    } else if (phoneNumber.length == 11) {
+      return '(${phoneNumber.substring(0, 4)}) ${phoneNumber.substring(4, 7)} ${phoneNumber.substring(7)}';
     }
     // Add more custom phone number formatting logic for different formats if needed.
     return phoneNumber;
   }
 
-// Not fully tested.
+  // Not fully tested.
   static String internationalFormatPhoneNumber(String phoneNumber) {
     // Remove any non-digit characters from the phone number
     var digitsOnly = phoneNumber.replaceAll(RegExp(r'\D'), '');
@@ -35,7 +34,7 @@ class Formatter {
 
     // Add the remaining digits with proper formatting
     final formattedNumber = StringBuffer();
-    formattedNumber.write('($countryCode)');
+    formattedNumber.write('($countryCode) ');
 
     int i = 0;
     while (i < digitsOnly.length) {
@@ -45,18 +44,19 @@ class Formatter {
       }
 
       int end = i + groupLength;
-      if (end > digitsOnly.length) {
-        end = digitsOnly.length; // Prevent out of bounds error
-      }
       formattedNumber.write(digitsOnly.substring(i, end));
 
       if (end < digitsOnly.length) {
-        formattedNumber.write(' '); // Add space between groups
+        formattedNumber.write(' ');
       }
-
       i = end;
     }
 
     return formattedNumber.toString();
   }
 }
+
+/*
+*
+*
+* */

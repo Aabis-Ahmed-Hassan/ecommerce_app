@@ -2,21 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
-class THelperFunctions {
+class HelperFunctions {
   static Color? getColor(String value) {
-    /// Define your product-specific colors here, and it will match the attribute colors and show specific colors.
+    /// Define your product specific colors here and it will match the attribute colors and show specific 🟠🟡🟢🔵🟣🟤
+
     if (value == 'Green') {
       return Colors.green;
+    } else if (value == 'Green') {
+      return Colors.green;
     } else if (value == 'Red') {
-      // Corrected duplicate 'Green' to 'Red'
       return Colors.red;
     } else if (value == 'Blue') {
       return Colors.blue;
     } else if (value == 'Pink') {
-      // Corrected typo 'Pink)' to 'Pink'
       return Colors.pink;
     } else if (value == 'Grey') {
-      // Corrected typo 'Grey)' to 'Grey'
       return Colors.grey;
     } else if (value == 'Purple') {
       return Colors.purple;
@@ -27,16 +27,16 @@ class THelperFunctions {
     } else if (value == 'Yellow') {
       return Colors.yellow;
     } else if (value == 'Orange') {
-      return Colors.orange;
+      return Colors.deepOrange;
     } else if (value == 'Brown') {
       return Colors.brown;
     } else if (value == 'Teal') {
       return Colors.teal;
     } else if (value == 'Indigo') {
       return Colors.indigo;
+    } else {
+      return null;
     }
-
-    return null; // Return null if no match is found
   }
 
   static void showSnackBar(String message) {
@@ -55,7 +55,7 @@ class THelperFunctions {
           actions: [
             TextButton(
               onPressed: () => Navigator.of(context).pop(),
-              child: const Text("OK"), // Corrected "DK" to "OK"
+              child: const Text('OK'),
             ),
           ],
         );
@@ -105,11 +105,9 @@ class THelperFunctions {
 
   static List<Widget> wrapWidgets(List<Widget> widgets, int rowSize) {
     final wrappedList = <Widget>[];
-
     for (var i = 0; i < widgets.length; i += rowSize) {
       final rowChildren = widgets.sublist(
           i, i + rowSize > widgets.length ? widgets.length : i + rowSize);
-
       wrappedList.add(Row(children: rowChildren));
     }
     return wrappedList;

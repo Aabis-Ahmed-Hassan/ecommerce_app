@@ -61,11 +61,24 @@ flutter:
   uses-material-design: true
 
 # Local Assets
+#  assets:
+#    - assets/icons/
+#    - assets/images/
+#    - assets/images/onboarding_images/
+#    - assets/logo/
+
   assets:
-    - assets/icons/
-    - assets/images/
-    - assets/images/onboarding_images/
     - assets/logo/
+    - assets/icons/brands/
+    - assets/images/content/
+    - assets/images/banners/
+    - assets/images/reviews/
+    - assets/images/products/
+    - assets/icons/categories/
+    - assets/images/animations/
+    - assets/icons/payment_methods/
+    - assets/images/on_boarding_images/
+
 
 # Local Fonts
   fonts:

@@ -1,6 +1,6 @@
-class Sizes {
+class MySizes {
   // Padding and margin sizes
-  static const double xs = 4.8;
+  static const double xs = 4.0;
   static const double sm = 8.0;
   static const double md = 16.0;
   static const double lg = 24.0;
@@ -41,7 +41,8 @@ class Sizes {
 
   // Divider height
   static const double dividerHeight = 1.0;
-  // Product related
+
+  // Product item dimensions
   static const double productImageSize = 120.0;
   static const double productImageRadius = 16.0;
   static const double productItemHeight = 160.0;

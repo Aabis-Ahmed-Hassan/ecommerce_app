@@ -13,7 +13,7 @@ class LoginForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Form(
       child: Padding(
-        padding: EdgeInsets.symmetric(vertical: Sizes.spaceBtwSections),
+        padding: EdgeInsets.symmetric(vertical: MySizes.spaceBtwSections),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -28,7 +28,7 @@ class LoginForm extends StatelessWidget {
             ),
             // space
             SizedBox(
-              height: Sizes.spaceBtwItems,
+              height: MySizes.spaceBtwItems,
             ),
             // password
             TextFormField(
@@ -44,7 +44,7 @@ class LoginForm extends StatelessWidget {
             ),
             // space
             SizedBox(
-              height: Sizes.sm,
+              height: MySizes.sm,
             ),
 
             // remember me & forget
@@ -74,7 +74,7 @@ class LoginForm extends StatelessWidget {
             ),
             // space
             SizedBox(
-              height: Sizes.md,
+              height: MySizes.md,
             ),
             // sign in
             SizedBox(
@@ -88,7 +88,7 @@ class LoginForm extends StatelessWidget {
             ),
             // space
             SizedBox(
-              height: Sizes.spaceBtwItems,
+              height: MySizes.spaceBtwItems,
             ),
             // sign up
             SizedBox(
