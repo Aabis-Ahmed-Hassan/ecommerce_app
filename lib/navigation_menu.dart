@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/features/shop/screens/home/home.dart';
 import 'package:ecommerce_app/utility/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -12,14 +13,7 @@ class NavigationMenu extends StatelessWidget {
     final isDarkMode = HelperFunctions.isDarkMode(context);
     return Scaffold(
       body: Obx(() {
-        return Container(
-          child: Center(
-            child: Text(
-              controller.selectedIndex.value.toString(),
-              style: TextStyle(fontSize: 30),
-            ),
-          ),
-        );
+        return controller.screens[controller.selectedIndex.value];
       }),
       bottomNavigationBar: Obx(() {
         return NavigationBar(
@@ -59,4 +53,16 @@ class NavigationMenu extends StatelessWidget {
 
 class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
+  final List<Widget> screens = [
+    Home(),
+    Container(
+      color: Colors.red,
+    ),
+    Container(
+      color: Colors.blue,
+    ),
+    Container(
+      color: Colors.green,
+    ),
+  ];
 }
