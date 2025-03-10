@@ -41,13 +41,14 @@ dependencies:
   flutter_native_splash: ^2.4.4
 #  smooth_page_indicator: ^1.2.0+3
   smooth_page_indicator:
-
   # Icons
   iconsax: ^0.0.8
   cupertino_icons: ^1.0.8
   #  State Management
   get: ^4.6.6
   get_storage: ^2.1.1
+#  carousel
+  carousel_slider: ^5.0.0
 
 
 dev_dependencies:
