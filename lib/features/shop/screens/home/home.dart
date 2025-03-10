@@ -1,4 +1,6 @@
 import 'package:ecommerce_app/common/widgets/custom_shapes/conatiners/primary_header_container.dart';
+import 'package:ecommerce_app/common/widgets/layouts/grid_layout.dart';
+import 'package:ecommerce_app/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:ecommerce_app/common/widgets/texts/section_heading.dart';
 import 'package:ecommerce_app/features/shop/controllers/home_controller.dart';
 import 'package:ecommerce_app/features/shop/screens/home/widgets/home_app_bar.dart';
@@ -66,11 +68,22 @@ class Home extends StatelessWidget {
             //   body
             Padding(
               padding: EdgeInsets.all(MySizes.defaultSpace),
-              child: PromoSlider(
-                banners: [
-                  ImageStrings.promoBanner1,
-                  ImageStrings.promoBanner2,
-                  ImageStrings.promoBanner3,
+              child: Column(
+                children: [
+                  // carousel showing promo images
+                  PromoSlider(
+                    banners: [
+                      ImageStrings.promoBanner1,
+                      ImageStrings.promoBanner2,
+                      ImageStrings.promoBanner3,
+                    ],
+                  ),
+                  //   product cards (grid)
+                  GridLayout(
+                      itemCount: 4,
+                      itemBuilder: (context, index) {
+                        return ProductCardVertical();
+                      })
                 ],
               ),
             ),
