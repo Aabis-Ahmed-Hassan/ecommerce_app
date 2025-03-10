@@ -118,7 +118,7 @@ class ProductCardVertical extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       //   price
-ProductPriceText(price: '35.3'),
+                      ProductPriceText(price: '35.3'),
                       // add to cart (+) icon
                       Container(
                         decoration: BoxDecoration(
