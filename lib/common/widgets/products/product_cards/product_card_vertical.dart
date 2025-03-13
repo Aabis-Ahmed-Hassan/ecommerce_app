@@ -2,7 +2,6 @@ import 'package:ecommerce_app/common/styles/shadows.dart';
 import 'package:ecommerce_app/common/widgets/custom_shapes/conatiners/circular_container.dart';
 import 'package:ecommerce_app/common/widgets/icons/circular_icon.dart';
 import 'package:ecommerce_app/common/widgets/images/rounded_image.dart';
-import 'package:ecommerce_app/common/widgets/texts/product_price_text.dart';
 import 'package:ecommerce_app/common/widgets/texts/product_title_text.dart';
 import 'package:ecommerce_app/utility/constants/colors.dart';
 import 'package:ecommerce_app/utility/constants/image_strings.dart';
@@ -10,6 +9,8 @@ import 'package:ecommerce_app/utility/constants/sizes.dart';
 import 'package:ecommerce_app/utility/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+
+import '../../texts/product_price_text.dart';
 
 class ProductCardVertical extends StatelessWidget {
   const ProductCardVertical({super.key});
@@ -76,7 +77,7 @@ class ProductCardVertical extends StatelessWidget {
             SizedBox(
               height: MySizes.spaceBtwItems / 2,
             ),
-            //   details (product name, company name, company status, price etc.)
+            //   product name, company name, company status
             Padding(
               padding: EdgeInsets.only(left: MySizes.sm),
               child: Column(
@@ -113,38 +114,44 @@ class ProductCardVertical extends StatelessWidget {
                       ),
                     ],
                   ),
-                  // Price and Add to Cart button
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      //   price
-                      ProductPriceText(price: '35.3'),
-                      // add to cart (+) icon
-                      Container(
-                        decoration: BoxDecoration(
-                          color: MyColors.dark,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(MySizes.cardRadiusMd),
-                            bottomRight:
-                                Radius.circular(MySizes.productImageRadius),
-                          ),
-                        ),
-                        child: SizedBox(
-                          height: MySizes.iconLg * 1.2,
-                          width: MySizes.iconLg * 1.2,
-                          child: Center(
-                            child: Icon(
-                              Icons.add,
-                              color: MyColors.white,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
                 ],
               ),
-            )
+            ),
+            // add spacer here to keep the height of all the vertical products same
+
+            Spacer(),
+            // Price and Add to Cart button
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                //   price
+                Padding(
+                  padding: EdgeInsets.only(left: MySizes.sm),
+                  child: ProductPriceText(price: '35.3'),
+                ),
+                // add to cart (+) icon
+                Container(
+                  decoration: BoxDecoration(
+                    color: MyColors.dark,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(MySizes.cardRadiusMd),
+                      bottomRight: Radius.circular(MySizes.productImageRadius),
+                    ),
+                  ),
+                  child: SizedBox(
+                    height: MySizes.iconLg * 1.2,
+                    width: MySizes.iconLg * 1.2,
+                    child: Center(
+                      child: Icon(
+                        Icons.add,
+                        color: MyColors.white,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),

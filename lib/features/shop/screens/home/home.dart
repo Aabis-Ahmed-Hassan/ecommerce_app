@@ -78,6 +78,16 @@ class Home extends StatelessWidget {
                       ImageStrings.promoBanner3,
                     ],
                   ),
+                  SizedBox(
+                    height: MySizes.spaceBtwSections,
+                  ),
+                  // heading
+                  SectionHeading(
+                    title: 'Popular Products',
+                  ),
+                  SizedBox(
+                    height: MySizes.spaceBtwSections,
+                  ),
                   //   product cards (grid)
                   GridLayout(
                       itemCount: 4,
