@@ -14,7 +14,7 @@ class RoundedImage extends StatelessWidget {
     this.width,
     this.padding,
     this.fit = BoxFit.contain,
-    this.backgroundColor = MyColors.light,
+    this.backgroundColor,
     this.makeRoundedCorners = true,
     this.border,
   });
@@ -28,7 +28,7 @@ class RoundedImage extends StatelessWidget {
   final EdgeInsetsGeometry? padding;
   final VoidCallback? onTap;
   final BoxFit fit;
-  final Color backgroundColor;
+  final Color? backgroundColor;
 
   @override
   Widget build(BuildContext context) {

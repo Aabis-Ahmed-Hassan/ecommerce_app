@@ -10,6 +10,7 @@ import 'package:ecommerce_app/utility/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
+import '../../texts/brand_title_text_with_verified_icon.dart';
 import '../../texts/product_price_text.dart';
 
 class ProductCardVertical extends StatelessWidget {
@@ -94,25 +95,8 @@ class ProductCardVertical extends StatelessWidget {
                   ),
 
                   // company name and status (verified etc.)
-                  Row(
-                    children: [
-                      // company name
-                      Text(
-                        'Nike',
-                        style: Theme.of(context).textTheme.labelMedium,
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                      ),
-                      SizedBox(
-                        width: MySizes.xs,
-                      ),
-                      // verified icon
-                      Icon(
-                        Iconsax.verify5,
-                        color: MyColors.primary,
-                        size: MySizes.iconXs,
-                      ),
-                    ],
+                  BrandTitleWithVerifiedIcon(
+                    title: 'asfadsf',
                   ),
                 ],
               ),
