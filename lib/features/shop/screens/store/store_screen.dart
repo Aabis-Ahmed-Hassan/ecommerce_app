@@ -26,6 +26,7 @@ class StoreScreen extends StatelessWidget {
         actions: [
           CartCounterIcon(
             onTap: () {},
+            iconColor: isDark ? MyColors.white : MyColors.black,
           ),
         ],
       ),
